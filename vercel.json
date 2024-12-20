@@ -2,12 +2,13 @@
     "version": 2,
     "builds": [
       {
-        "src": "app_api/*.js",
+        "src": "api/*.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
-      { "src": "/api/(.*)", "dest": "/api/$1" }
+      { "src": "/api/comment-controller", "dest": "/api/comment-controller.js" },
+      { "src": "/api/venue-controller", "dest": "/api/venue-controller.js" }
     ]
   }
   
