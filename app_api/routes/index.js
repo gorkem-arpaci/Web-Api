@@ -1,7 +1,7 @@
 var expres = require('express')
 var router = expres.Router()
-var ctrlVenues = require("../controllers/VenueController")
-var ctrlComments = require("../controllers/CommentController")
+var ctrlVenues = require("../../api/VenueController")
+var ctrlComments = require("../../api/CommentController")
 
 router
 .route('/venues')
