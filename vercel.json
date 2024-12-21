@@ -1,14 +1,15 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "/bin/www",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      { "src": "/api/comment-controller", "dest": "/api/comment-controller.js" },
-      { "src": "/api/venue-controller", "dest": "/api/venue-controller.js" }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "bin/www",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "bin/www"
+    }
+  ]
+}
